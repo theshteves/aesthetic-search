@@ -15,8 +15,8 @@ def hello():
     input_info = []
     for gif in data:
         input_info.append([gif['images']['fixed_width'], gif['slug']])
-    return render_template('index.html',gifs=input_info)
-    #return app.send_static_file('index.html')
+    #return render_template('index.html',gifs=input_info)
+    return render_template('landing.html')
 
 @app.route('/<path:path>')
 def static_file(path):

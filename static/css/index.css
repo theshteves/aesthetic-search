@@ -122,28 +122,32 @@
 
 body {
   	background-color: #202026;
-	position: absolute;
-	height: 100%;
 	width: 100%;
 	margin: 0 auto;
-    overflow: hidden;
+	padding: 0;
+	overflow: hidden;
 }
+
+form {
+	position: fixed;
+}
+
 .background-wrapper {
     height: 100%;
     width: 200%;
     display: flex;
     justify-content: flex-end;
 }
-    .background {
-    	position: relative;
-    	height: 110%;
-        z-index: 10;
-        margin-top: -95px;
-    }
+.background {
+	position: relative;
+	height: 110%;
+	z-index: 10;
+	margin-top: -95px;
+}
 
-    .left {
-        margin-left: -100%;
-    }
+.left {
+	margin-left: -100%;
+}
 
 .title {
     z-index: 30;
@@ -164,8 +168,7 @@ body {
 	display: -webkit-flex;
 	display: flex;
 	font-size: 16px;
-	/*-webkit-justify-content: center;
-	justify-content: center;*/
+	top: 30%;
 	left: 25%;
 	padding: 10px;
 	margin: 13px 0 26px 0;

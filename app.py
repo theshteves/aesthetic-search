@@ -4,9 +4,6 @@ import json
 import tweepy
 import os
 
-port=int(os.environ.get('PORT', 5000))
-print("port: " + str(port))
-
 from flask import Flask, request, redirect, url_for, send_from_directory, render_template
 app = Flask(__name__, static_url_path='')
 
@@ -31,4 +28,6 @@ def search():
     return render_template('index.html', gifs=input_info)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=port)
+    port=int(os.environ.get('PORT', 5000))
+    print("port: " + str(port))
+    app.run(debug=True, port=port, host='0.0.0.0')

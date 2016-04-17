@@ -2,7 +2,7 @@
 
 ### Built at UncommonHacks 2016
 
-![site-preview](https://raw.githubusercontent.com/theshteves/aesthetic-search/master/static/media/site-preview)
+![site-preview](https://raw.githubusercontent.com/theshteves/aesthetic-search/master/static/media/site-preview.png)
 
 ### Inspiration
 

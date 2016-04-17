@@ -8,11 +8,14 @@
         <audio autoplay>
 			<source src="media/macintosh_plus.mp3">
 		</audio>
-        <h1>M S U A E S T H E T I C</h1>
-	  	<img class="move" id="background" src="media/jazz2.jpg"></img>
+        <h1 class="title">M S U A E S T H E T I C</h1>
+        <div class="move background-wrapper">
+            <img class="background left" src="media/jazz2.jpg"/>
+            <img class="background" src="media/jazz2.jpg"/>
+        </div>
         <div class="gif-wrapper gif_move">
         {% for gif in gifs %}
-            <div id="{{ gif[1] }}">
+            <div class='gif' id="{{ gif[1] }}">
                 <a href="{{ gif[0]['url'] }}"><img src="{{ gif[0]['url'] }}" /></a>
             </div>
         {% endfor %}

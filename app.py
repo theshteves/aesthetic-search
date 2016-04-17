@@ -9,12 +9,12 @@ app = Flask(__name__, static_url_path='')
 def hello():
     #print("PATH: " + path)
 
-    r = urllib2.urlopen("http://api.giphy.com/v1/gifs/search?q=dank+memes&api_key=dc6zaTOxFJmzC").read()
+    r = urllib2.urlopen("http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC").read()
     parsed_json = json.loads(r)
     data = parsed_json['data']
     input_info = []
     for gif in data:
-        input_info.append([gif['images']['downsized_medium'], gif['slug']])
+        input_info.append([gif['images']['fixed_width'], gif['slug']])
     return render_template('index.html',gifs=input_info)
 
 @app.route('/<path:path>')

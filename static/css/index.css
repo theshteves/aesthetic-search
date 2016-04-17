@@ -1,33 +1,33 @@
 @-webkit-keyframes animateCloud {
     0% {
-	margin-left: -1000px;
+	margin-left: -100%;
     }
     100% {
-	margin-left: 70%;
+	margin-left: 0;
     }
 }
 
 @-moz-keyframes animateCloud {
     0% {
-	margin-left: -1000px;
+	margin-left: -100%;
     }
     100% {
-	margin-left: 70%;
+	margin-left: 0;
     }
 }
 
 @keyframes animateCloud {
     0% {
-	margin-left: -1000px;
+	margin-left: -100%;
     }
     100% {
-	margin-left: 70%;
+	margin-left: 0;
     }
 }
 
 @-webkit-keyframes animateGif {
     0% {
-	margin-left: -700%;
+	margin-left: -480px;
     }
     100% {
 	margin-left: 0;
@@ -36,7 +36,7 @@
 
 @-moz-keyframes animateGif {
     0% {
-	margin-left: -700%;
+	margin-left: -480px;
     }
     100% {
 	margin-left: 0;
@@ -45,7 +45,7 @@
 
 @keyframes animateGif {
     0% {
-	margin-left: -700%;
+	margin-left: -480px;
     }
     100% {
 	margin-left: 0;
@@ -65,9 +65,9 @@
 }
 
 .gif_move {
-    -webkit-animation: animateGif 55s linear infinite;
-    -moz-animation: animateGif 55s linear infinite;
-    animation: animateGif 55s linear infinite;
+    -webkit-animation: animateGif 25s linear infinite;
+    -moz-animation: animateGif 25s linear infinite;
+    animation: animateGif 25s linear infinite;
 
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -79,15 +79,36 @@ body {
 	height: 100%;
 	width: 100%;
 	margin: 0 auto;
+    overflow: hidden;
 }
+.background-wrapper {
+    height: 100%;
+    width: 200%;
+    display: flex;
+    justify-content: flex-end;
+}
+    .background {
+    	position: relative;
+    	height: 110%;
+        z-index: 10;
+        margin-top: -95px;
+    }
 
-#background {
-	position: relative;
-	height: 110%;
+    .left {
+        margin-left: -100%;
+    }
+
+.title {
+    z-index: 30;
+    position: relative;
+    text-align: center;
 }
 
 /* GIF Styles */
 .gif-wrapper {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 50;
+    margin-top: -40%;
 }

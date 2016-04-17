@@ -5,7 +5,7 @@ import tweepy
 import os
 
 port=int(os.environ.get('PORT', 5000))
-print "port: " + port
+print("port: " + str(port))
 
 from flask import Flask, request, redirect, url_for, send_from_directory, render_template
 app = Flask(__name__, static_url_path='')

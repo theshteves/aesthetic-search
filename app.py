@@ -13,7 +13,7 @@ def index():
 @app.route('/search')
 def search():
     #print("PATH: " + path)
-    query = request.args['key']
+    query = request.query_string[3:]
     url = "http://api.giphy.com/v1/gifs/search?q="+query+"&api_key=dc6zaTOxFJmzC"
     r = urllib2.urlopen(url).read()
     parsed_json = json.loads(r)

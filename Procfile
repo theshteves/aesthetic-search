@@ -1,1 +1,1 @@
-web: grunfile hello:app
+web: python app.py

@@ -1,1 +1,1 @@
-web: grunfile hello:app
+web: gunicorn hello:app

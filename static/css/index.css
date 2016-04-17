@@ -121,6 +121,7 @@
 }
 
 body {
+  	background-color: #202026;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -157,4 +158,59 @@ body {
     position: relative;
     z-index: 50;
     margin-top: -40%;
+}
+
+.search{
+	display: -webkit-flex;
+	display: flex;
+	font-size: 16px;
+	/*-webkit-justify-content: center;
+	justify-content: center;*/
+	left: 25%;
+	padding: 10px;
+	margin: 13px 0 26px 0;
+	border: solid white 2px;
+	border-radius: 10px;
+	text-align: center;
+	width: 50%;
+	max-height: 50px;
+	color: white;
+	background: transparent;
+}
+
+
+.searchbar {
+	-webkit-appearance: none;
+	background-color: transparent;
+	color: white;
+	border: none;
+	width: 100%;
+} 
+input,
+::-webkit-input-placeholder {
+	font-family: "Montserrat", sans-serif;
+   	color: white;
+   	font-size: 18px;
+   	line-height: 1.25;
+}
+
+input,
+::-moz-placeholder {
+	opacity: 1;
+	margin-left: 12px;
+	font-family: "Montserrat", sans-serif;
+   	color: white;
+   	font-size: 18px;
+   	line-height: 1.25;
+}
+
+
+input:focus {outline: none; }
+
+.search>i{
+	margin: auto 0;
+}
+
+.submit{
+	display: none;
 }

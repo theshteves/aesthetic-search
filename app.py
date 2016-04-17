@@ -6,7 +6,7 @@ from flask import Flask, request, redirect, url_for, send_from_directory, render
 app = Flask(__name__, static_url_path='')
 
 @app.route('/')
-def root():
+def hello():
     #print("PATH: " + path)
 
     r = urllib2.urlopen("http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC").read()
@@ -16,6 +16,10 @@ def root():
     for gif in data:
         input_info.append([gif['images']['downsized_medium'], gif['slug']])
     return render_template('index.html',gifs=input_info)
+
+@app.route('/<path:path>')
+def static_file(path):
+        return app.send_static_file(path)
 
 if __name__ == '__main__':
     app.run(debug=True)

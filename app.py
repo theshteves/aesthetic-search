@@ -9,7 +9,7 @@ app = Flask(__name__, static_url_path='')
 def hello():
     #print("PATH: " + path)
 
-    r = urllib2.urlopen("http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC").read()
+    r = urllib2.urlopen("http://api.giphy.com/v1/gifs/search?q=dank+memes&api_key=dc6zaTOxFJmzC").read()
     parsed_json = json.loads(r)
     data = parsed_json['data']
     input_info = []

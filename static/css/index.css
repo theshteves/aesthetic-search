@@ -25,6 +25,33 @@
     }
 }
 
+@-webkit-keyframes animateGif {
+    0% {
+	margin-left: -700%;
+    }
+    100% {
+	margin-left: 0;
+    }
+}
+
+@-moz-keyframes animateGif {
+    0% {
+	margin-left: -700%;
+    }
+    100% {
+	margin-left: 0;
+    }
+}
+
+@keyframes animateGif {
+    0% {
+	margin-left: -700%;
+    }
+    100% {
+	margin-left: 0;
+    }
+}
+
 /* ANIMATIONS */
 
 .move {
@@ -37,15 +64,30 @@
     transform: scale(1);
 }
 
+.gif_move {
+    -webkit-animation: animateGif 55s linear infinite;
+    -moz-animation: animateGif 55s linear infinite;
+    animation: animateGif 55s linear infinite;
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
 body {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	margin: 0 auto;
-	overflow: hidden;
 }
 
 #background {
 	position: relative;
 	height: 110%;
+}
+
+/* GIF Styles */
+.gif-wrapper {
+    display: flex;
+    justify-content: space-between;
 }

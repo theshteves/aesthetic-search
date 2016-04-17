@@ -2,10 +2,15 @@
 <html>
     <head>
         <title>M S U</title>
+		<link rel="stylesheet" href="css/index.css">
     </head>
     <body>
+        <audio autoplay>
+			<source src="media/macintosh_plus.mp3">
+		</audio>
         <h1>M S U A E S T H E T I C</h1>
-        <div>
+	  	<img class="move" id="background" src="media/jazz2.jpg"></img>
+        <div class="gif-wrapper gif_move">
         {% for gif in gifs %}
             <div id="{{ gif[1] }}">
                 <a href="{{ gif[0]['url'] }}"><img src="{{ gif[0]['url'] }}" /></a>

@@ -85,6 +85,33 @@
     }
 }
 
+@-webkit-keyframes rotate{
+    0% {
+        transform: rotate3d(10,12,7,0);
+    }
+    100% {
+        transform: rotate3d(10,12,7,360deg);
+    }
+}
+
+@-moz-keyframes rotate{
+    0% {
+        transform: rotate3d(10,12,7,0);
+    }
+    100% {
+        transform: rotate3d(10,12,7,360deg);
+    }
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotate3d(10,12,7,0);
+    }
+    100% {
+        transform: rotate3d(10,12,7,360deg);
+    }
+}
+
 /* ANIMATIONS */
 
 .move {
@@ -128,6 +155,26 @@ body {
 	margin: 0 auto;
     overflow: hidden;
 }
+
+.cornerBox {
+    -webkit-animation: rotate 5s linear infinite alternate;
+    -moz-animation: rotate 5s linear infinite alternate;
+    animation: rotate 5s linear infinite alternate;
+
+    position: absolute;
+    z-index: 20;
+}
+    #ur {
+        right: 0;
+    }
+    #ll {
+        bottom: 0;
+    }
+    #lr {
+        bottom: 0;
+        right: 0;
+    }
+
 .background-wrapper {
     height: 100%;
     width: 200%;

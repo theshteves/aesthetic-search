@@ -161,7 +161,7 @@ body {
     -moz-animation: rotate 5s linear infinite alternate;
     animation: rotate 5s linear infinite alternate;
 
-    position: absolute;
+    position: fixed;
     z-index: 20;
 }
     #ur {
@@ -204,5 +204,5 @@ body {
     justify-content: space-between;
     position: relative;
     z-index: 50;
-    margin-top: -400px;
+    margin-top: -500px;
 }
